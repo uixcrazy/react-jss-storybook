@@ -1,4 +1,4 @@
-# 🐾 	🐾 	🐾  react-jss-storybook 🐾 	🐾 	🐾
+# 🐾 	🐾 	🐾  react-jss Storybook 🐾 	🐾 	🐾
 
 ```#react-jss #react #jss #storybook```
 
