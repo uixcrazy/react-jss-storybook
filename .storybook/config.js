@@ -5,10 +5,12 @@ setOptions({
   name: 'react-jss-storybook',
   url: 'https://github.com/uixcrazy/react-jss-storybook',
   goFullScreen: false,
-  showLeftPanel: true,
-  showDownPanel: true,
+  showStoriesPanel: true,
+  showAddonPanel: true,
   showSearchBox: false,
-  downPanelInRight: true,
+  addonPanelInRight: true,
+  hierarchySeparator: /\/|\./,
+  hierarchyRootSeparator: /\|/,
 });
 
 function loadStories() {

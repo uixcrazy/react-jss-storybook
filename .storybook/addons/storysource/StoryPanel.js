@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { monoFonts } from '@storybook/components';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import { darcula } from 'react-syntax-highlighter/styles/prism';
+import { vs } from 'react-syntax-highlighter/styles/prism';
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
 import { createElement } from 'react-syntax-highlighter';
 import { ADD_SOURCE_EVENT } from './constants';
 
 // TODO: take from theme
 const highlighterTheme = {
-  ...darcula,
+  ...vs,
   'pre[class*="language-"]': {
-    ...darcula['pre[class*="language-"]'],
+    ...vs['pre[class*="language-"]'],
     margin: 'auto',
     width: 'auto',
     height: 'auto',
@@ -23,7 +23,7 @@ const highlighterTheme = {
     fontSize: 'inherit',
   },
   'code[class*="language-"]': {
-    ...darcula['code[class*="language-"]'],
+    ...vs['code[class*="language-"]'],
     margin: 0,
     fontFamily: 'inherit',
   },
@@ -35,7 +35,7 @@ const styles = {
   story: {
     display: 'block',
     textDecoration: 'none',
-    color: darcula['code[class*="language-"]'].color,
+    color: vs['code[class*="language-"]'].color,
   },
   selectedStory: {
     backgroundColor: 'rgba(255, 242, 60, 0.2)',
@@ -86,7 +86,8 @@ export default class StoryPanel extends Component {
     <span>{this.createPart(rows, stylesheet, useInlineStyles)}</span>
 
   render() {
-    return (
+    const { active } = this.props;
+    return active ? (
       <SyntaxHighlighter
         language="jsx"
         showLineNumbers="true"
@@ -96,11 +97,12 @@ export default class StoryPanel extends Component {
       >
         {this.state.source}
       </SyntaxHighlighter>
-    )
+    ) : null;
   }
 }
 
 StoryPanel.propTypes = {
+  active: PropTypes.bool.isRequired,
   api: PropTypes.shape({
     selectStory: PropTypes.func.isRequired,
   }).isRequired,
