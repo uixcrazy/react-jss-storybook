@@ -6,7 +6,7 @@ import { ADDON_ID, PANEL_ID } from './constants';
 
 addons.register(ADDON_ID, api => {
   addons.addPanel(PANEL_ID, {
-    title: 'STORY SOURCE',
+    title: 'SOURCE',
     render: ({ active }) => (
       <StoryPanel channel={addons.getChannel()} api={api} active={active} />
     ),

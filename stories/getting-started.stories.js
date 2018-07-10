@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withMarkdownNotes } from '@storybook/addon-notes';
+// import { withMarkdownNotes } from '@storybook/addon-notes';
+import { withMarkdownNotes } from '../.storybook/addons/notes';
 import WithStorySource from '../.storybook/addons/storysource/WithStorySource';
 
 import GettingStarted from '../src/getting-started';
