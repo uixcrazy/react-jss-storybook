@@ -1,4 +1,5 @@
 import addons, { makeDecorator } from '@storybook/addons';
+import { ADD_NOTES_EVENT } from './constants';
 import marked from 'marked';
 
 function renderMarkdown(text, options) {
@@ -23,7 +24,7 @@ export const withNotes = makeDecorator({
       throw new Error('You must set of one of `text` or `markdown` on the `notes` parameter');
     }
 
-    channel.emit('storybook/notes/add_notes', text || renderMarkdown(markdown, markdownOptions));
+    channel.emit(ADD_NOTES_EVENT, text || renderMarkdown(markdown, markdownOptions));
 
     return getStory(context);
   },
