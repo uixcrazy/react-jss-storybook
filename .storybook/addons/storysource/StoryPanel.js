@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { monoFonts } from '@storybook/components';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import { vs } from 'react-syntax-highlighter/styles/prism';
+import { coy } from 'react-syntax-highlighter/styles/prism';
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
 import { createElement } from 'react-syntax-highlighter';
 import { ADD_SOURCE_EVENT } from './constants';
 
 // TODO: take from theme
 const highlighterTheme = {
-  ...vs,
+  ...coy,
   'pre[class*="language-"]': {
-    ...vs['pre[class*="language-"]'],
+    ...coy['pre[class*="language-"]'],
     margin: 'auto',
     width: 'auto',
     height: 'auto',
@@ -23,9 +23,11 @@ const highlighterTheme = {
     fontSize: 'inherit',
   },
   'code[class*="language-"]': {
-    ...vs['code[class*="language-"]'],
+    ...coy['code[class*="language-"]'],
     margin: 0,
     fontFamily: 'inherit',
+    paddingLeft: 12,
+    paddingTop: 10,
   },
 };
 
@@ -35,7 +37,7 @@ const styles = {
   story: {
     display: 'block',
     textDecoration: 'none',
-    color: vs['code[class*="language-"]'].color,
+    color: coy['code[class*="language-"]'].color,
   },
   selectedStory: {
     backgroundColor: 'rgba(255, 242, 60, 0.2)',

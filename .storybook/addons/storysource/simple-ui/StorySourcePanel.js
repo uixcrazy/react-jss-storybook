@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ADD_SOURCE_EVENT } from '../constants';
-import './StorySourcePanel.css';
 
 class StorySourcePanel extends React.Component {
   constructor(...props) {
@@ -63,5 +62,3 @@ StorySourcePanel.propTypes = {
 };
 
 export default StorySourcePanel;
-
-
