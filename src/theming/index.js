@@ -28,13 +28,13 @@ const styles = theme => ({
     },
     '& li': { // for Inspector Tree
       padding: '5px 0',
-    }
-  }
-})
+    },
+  },
+});
 
 class Button extends Component {
   state = {
-    message: 'Hello!'
+    message: 'Hello!',
   };
 
   handleClick = () => {
@@ -63,6 +63,6 @@ const StyledButtonWithTheme = () => (
   <AppLayout>
     <StyledButton />
   </AppLayout>
-)
+);
 
 export default StyledButtonWithTheme;

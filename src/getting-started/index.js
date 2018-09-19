@@ -25,18 +25,20 @@ const styles = {
       color: '#fff',
       backgroundColor: '#00a7cf',
       borderColor: '#009fc5',
-    }
+    },
   },
-}
+};
 
 class GettingStarted extends Component {
   constructor(props) {
     super(props);
-    this.state = {message: 'Hello!'};
+    this.state = { message: 'Hello!' };
   }
+
   handleClick = () => {
     alert(this.state.message);
   }
+
   render() {
     return (
       <button

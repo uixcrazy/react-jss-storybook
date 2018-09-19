@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import WithNotes from '../.storybook/addons/notes/WithNotes';
 import WithStorySource from '../.storybook/addons/storysource/WithStorySource';
-
+/* eslint-disable */
 import GettingStarted from '../src/getting-started';
 import GettingStartedReadme from '../src/getting-started/README.md';
 import GettingStartedContent from '!!raw-loader!../src/getting-started';

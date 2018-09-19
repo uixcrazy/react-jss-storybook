@@ -2,6 +2,8 @@
  * https://material-ui.com/customization/default-theme/
  */
 
+/* eslint-disable */
+
 export const DefaultTheme = {
   breakpoints: {
     keys: [ 'xs', 'sm', 'md', 'lg', 'xl' ],

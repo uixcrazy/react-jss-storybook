@@ -22,4 +22,4 @@ Add the following line to your .babelrc file:
 
 ## See more information
 
-[Decorators : React JSS](http://cssinjs.org/react-jss?v=v8.6.1#decorators)
+[Decorators : React JSS](http://cssinjs.org/react-jss#decorators)

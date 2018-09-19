@@ -18,6 +18,6 @@ It allows you to customize all design aspects of your project in order to meet t
 
 ## See more information
 
-[Theming : react-jss](http://cssinjs.org/react-jss?v=v8.6.1#theming)
+[Theming : react-jss](http://cssinjs.org/react-jss#theming)
 
 [default theme](https://material-ui.com/customization/default-theme/)
