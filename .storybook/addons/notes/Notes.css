@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 1` */
+}
+
 .addon-notes-container {
   padding: 10px;
   box-sizing: border-box;
@@ -82,4 +90,24 @@
   margin-bottom: 16px;
   font-size: 12px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table thead th,
+table tbody td {
+  border: solid 1px #e0e0e0;
+  padding: 14px;
+  font-size: 14px;
+  vertical-align: top;
+}
+table tbody tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul {
+  list-style: none;
+  padding-left: 10px;
 }

@@ -2,8 +2,8 @@ import { configure } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 
 setOptions({
-  name: 'react-jss-storybook',
-  url: 'https://github.com/uixcrazy/react-jss-storybook',
+  name: 'storybook',
+  url: 'https://github.com/uixcrazy/storybook',
   goFullScreen: false,
   showStoriesPanel: true,
   showAddonPanel: true,
