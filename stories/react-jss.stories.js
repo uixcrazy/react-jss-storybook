@@ -19,6 +19,10 @@ import Decorators from '../src/decorators';
 import DecoratorsReadme from '../src/decorators/README.md';
 import DecoratorsContent from '!!raw-loader!../src/decorators';
 
+import JssCustom from '../src/jss-custom';
+import JssCustomReadme from '../src/jss-custom/README.md';
+import JssCustomContent from '!!raw-loader!../src/jss-custom';
+
 storiesOf('React JSS', module)
 .add('1. Getting Started', () =>(
   <WithNotes notes={GettingStartedReadme}>
@@ -41,7 +45,6 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
-
 .add('4. Decorators', () =>(
   <WithNotes notes={DecoratorsReadme}>
     <WithStorySource storysource={DecoratorsContent}>
@@ -49,3 +52,11 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
+.add('5. Custom setup', () =>(
+  <WithNotes notes={JssCustomReadme}>
+    <WithStorySource storysource={JssCustomContent}>
+      <JssCustom />
+    </WithStorySource>
+  </WithNotes>
+))
+// .
