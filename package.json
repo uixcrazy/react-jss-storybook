@@ -52,6 +52,7 @@
     "react": "^16.4.1",
     "react-dev-utils": "6.0.0-next.3e165448",
     "react-dom": "^16.4.1",
+    "react-inspector": "^2.3.0",
     "react-jss": "^8.6.1",
     "react-syntax-highlighter": "^8.0.1",
     "resolve": "1.6.0",

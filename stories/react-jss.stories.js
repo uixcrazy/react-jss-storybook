@@ -7,9 +7,13 @@ import GettingStarted from '../src/getting-started';
 import GettingStartedReadme from '../src/getting-started/README.md';
 import GettingStartedContent from '!!raw-loader!../src/getting-started';
 
-import Theme from '../src/theme';
-import ThemeReadme from '../src/theme/README.md';
-import ThemeContent from '!!raw-loader!../src/theme';
+import Theming from '../src/theming';
+import ThemingReadme from '../src/theming/README.md';
+import ThemingContent from '!!raw-loader!../src/theming';
+
+import SSRendering from '../src/server-side-rendering';
+import SSRenderingReadme from '../src/server-side-rendering/README.md';
+import SSRenderingContent from '!!raw-loader!../src/server-side-rendering';
 
 storiesOf('React JSS', module)
 .add('1. Getting Started', () =>(
@@ -19,10 +23,17 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
-.add('2. Theme', () =>(
-  <WithNotes notes={ThemeReadme}>
-    <WithStorySource storysource={ThemeContent}>
-      <Theme />
+.add('2. Theming', () =>(
+  <WithNotes notes={ThemingReadme}>
+    <WithStorySource storysource={ThemingContent}>
+      <Theming />
+    </WithStorySource>
+  </WithNotes>
+))
+.add('3. Server-side rendering', () =>(
+  <WithNotes notes={SSRenderingReadme}>
+    <WithStorySource storysource={SSRenderingContent}>
+      <SSRendering />
     </WithStorySource>
   </WithNotes>
 ))

@@ -10,7 +10,10 @@ const styles = {
     fontSize: 18,
     letterSpacing: 0.6,
     borderRadius: 5,
-    transition: 'color 300ms ease-in-out, background-color 300ms ease-in-out, opacity 300ms ease-in-out',
+    cursor: 'pointer',
+    transition: `color 300ms ease-in-out,
+      background-color 300ms ease-in-out,
+      opacity 300ms ease-in-out`,
     verticalAlign: 'middle',
     padding: { // jss-expand gives more readable syntax
       top: 9, // jss-default-unit makes this 5px

@@ -61,6 +61,10 @@
   margin-bottom: 10px;
 }
 
+.addon-notes-container ol {
+  margin-left: 20px;
+}
+
 .addon-notes-container h1,
 .addon-notes-container h2,
 .addon-notes-container h3,

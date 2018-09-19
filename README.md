@@ -1,4 +1,4 @@
-# 🐾 	🐾 	🐾  react-jss Storybook 🐾 	🐾 	🐾
+# 🐾 	🐾 	🐾  JSS React Storybook 🐾 	🐾 	🐾
 
 ```#react-jss #react #jss #storybook```
 
@@ -23,6 +23,14 @@ To run project on your local: ```yarn run storybook```
 
 Then open ```http://localhost:6006/``` to see your app.
 
+## Table of Contents
+
+  - [x] Getting Started
+  - [x] Theming
+  - [ ] Server-side rendering (we have issue with Nextjs)
+
+
+
 #### Next Topics
 
   - Media queries
@@ -35,4 +43,3 @@ Then open ```http://localhost:6006/``` to see your app.
   - Extend
   - Nested
   - Isolate
-  - Theme
