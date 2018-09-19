@@ -27,9 +27,9 @@ Then open ```http://localhost:6006/``` to see your app.
 
   - [x] Getting Started
   - [x] Theming
+  - [x] Decorators
+  - [ ] Custom setup
   - [ ] Server-side rendering (we have issue with Nextjs)
-
-
 
 #### Next Topics
 

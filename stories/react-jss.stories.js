@@ -15,6 +15,10 @@ import SSRendering from '../src/server-side-rendering';
 import SSRenderingReadme from '../src/server-side-rendering/README.md';
 import SSRenderingContent from '!!raw-loader!../src/server-side-rendering';
 
+import Decorators from '../src/decorators';
+import DecoratorsReadme from '../src/decorators/README.md';
+import DecoratorsContent from '!!raw-loader!../src/decorators';
+
 storiesOf('React JSS', module)
 .add('1. Getting Started', () =>(
   <WithNotes notes={GettingStartedReadme}>
@@ -34,6 +38,14 @@ storiesOf('React JSS', module)
   <WithNotes notes={SSRenderingReadme}>
     <WithStorySource storysource={SSRenderingContent}>
       <SSRendering />
+    </WithStorySource>
+  </WithNotes>
+))
+
+.add('4. Decorators', () =>(
+  <WithNotes notes={DecoratorsReadme}>
+    <WithStorySource storysource={DecoratorsContent}>
+      <Decorators />
     </WithStorySource>
   </WithNotes>
 ))
