@@ -1,2 +1,2 @@
 import './stories.style.css';
-import './getting-started.stories';
+import './react-jss.stories';

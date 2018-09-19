@@ -22,3 +22,17 @@ yarn
 To run project on your local: ```yarn run storybook```
 
 Then open ```http://localhost:6006/``` to see your app.
+
+#### Next Topics
+
+  - Media queries
+  - Keyframes animation
+  - Font face
+  - Pseudo selectors
+  - Fallbacks: you can define the same property multiple times, like you know it from CSS.
+  - Automatic vendor prefixing
+  - Default preset
+  - Extend
+  - Nested
+  - Isolate
+  - Theme
