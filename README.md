@@ -31,6 +31,10 @@ Then open ```http://localhost:6006/``` to see your app.
   - [ ] Custom setup
   - [ ] Server-side rendering (we have issue with Nextjs)
 
+  Others:
+
+  - [ ] remove postcss
+
 #### Next Topics
 
   - Media queries
