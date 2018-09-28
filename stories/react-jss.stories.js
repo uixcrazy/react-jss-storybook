@@ -7,6 +7,10 @@ import GettingStarted from '../src/getting-started';
 import GettingStartedReadme from '../src/getting-started/README.md';
 import GettingStartedContent from '!!raw-loader!../src/getting-started';
 
+import ExpandedProperties from '../src/expanded-properties';
+import ExpandedPropertiesReadme from '../src/expanded-properties/README.md';
+import ExpandedPropertiesContent from '!!raw-loader!../src/expanded-properties';
+
 import Theming from '../src/theming';
 import ThemingReadme from '../src/theming/README.md';
 import ThemingContent from '!!raw-loader!../src/theming';
@@ -31,24 +35,24 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
-.add('2. Theming', () =>(
+.add('2. Expanded Properties', () =>(
+  <WithNotes notes={ExpandedPropertiesReadme}>
+    <WithStorySource storysource={ExpandedPropertiesContent}>
+      <ExpandedProperties />
+    </WithStorySource>
+  </WithNotes>
+))
+.add('3. Theming', () =>(
   <WithNotes notes={ThemingReadme}>
     <WithStorySource storysource={ThemingContent}>
       <Theming />
     </WithStorySource>
   </WithNotes>
 ))
-.add('3. Server-side rendering', () =>(
+.add('4. Server-side rendering', () =>(
   <WithNotes notes={SSRenderingReadme}>
     <WithStorySource storysource={SSRenderingContent}>
       <SSRendering />
-    </WithStorySource>
-  </WithNotes>
-))
-.add('4. Decorators', () =>(
-  <WithNotes notes={DecoratorsReadme}>
-    <WithStorySource storysource={DecoratorsContent}>
-      <Decorators />
     </WithStorySource>
   </WithNotes>
 ))
@@ -59,4 +63,10 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
-// .
+.add('5... Decorators', () =>(
+  <WithNotes notes={DecoratorsReadme}>
+    <WithStorySource storysource={DecoratorsContent}>
+      <Decorators />
+    </WithStorySource>
+  </WithNotes>
+))
