@@ -1,8 +1,11 @@
+/**
+ * this is different ```withTheme``` by react-jss
+ */
 import React from 'react';
-import { ThemeProvider } from 'react-jss';
+import injectSheet, { ThemeProvider } from 'react-jss';
 import { DefaultTheme } from './default-theme';
 
-const withTheme = (App) => {
+const injectSheetWithTheme = (styles, App) => {
   const theme = {
     ...DefaultTheme,
     palette: { // it's wrong!!!
@@ -18,18 +21,18 @@ const withTheme = (App) => {
       },
     },
   };
-  const Layout = () => (
+  const StyledApp = injectSheet(styles)(App);
+  const Layout = props => (
     <ThemeProvider theme={theme}>
-      <App />
+      <StyledApp {...props}/>
     </ThemeProvider>
   );
   return Layout;
 };
+export default injectSheetWithTheme;
 
 // const App = props => (
 //   <ThemeProvider theme={theme}>
 //     {props.children}
 //   </ThemeProvider>
 // );
-
-export default withTheme;

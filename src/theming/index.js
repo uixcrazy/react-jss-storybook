@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import injectSheet from 'react-jss';
-import withTheme from './withTheme';
+import injectSheet from '../utils/injectSheetWithTheme';
 import ThemeDefaultInspector from './ThemeDefaultInspector';
 
 const styles = theme => ({
@@ -57,12 +56,11 @@ class Button extends Component {
   }
 }
 
-const StyledButton = withTheme(injectSheet(styles)(Button));
+const StyledButton = injectSheet(styles, Button);
+export default StyledButton;
 
 // const StyledButtonWithTheme = () => (
 //   <AppLayout>
 //     <StyledButton />
 //   </AppLayout>
 // );
-
-export default StyledButton;

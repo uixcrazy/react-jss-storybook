@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Inspector, { chromeDark } from 'react-inspector';
-import { DefaultTheme } from './default-theme';
+import { DefaultTheme } from '../utils/default-theme';
 
 class ThemeDefaultInspector extends Component {
   state = {
@@ -13,7 +13,7 @@ class ThemeDefaultInspector extends Component {
       <Fragment>
         <label>
           <input type="checkbox"
-            onChange={(event, value) => this.setState({ checked: !checked })}
+            onChange={(event, value) => this.setState({ checked: !checked })} // eslint-disable-line
             defaultChecked={this.state.checked}
           />
           <span>Expand all</span>
