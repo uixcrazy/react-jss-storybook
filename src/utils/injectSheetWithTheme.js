@@ -31,8 +31,14 @@ const injectSheetWithTheme = (styles, App) => {
 };
 export default injectSheetWithTheme;
 
-// const App = props => (
+// const AppLayout = props => (
 //   <ThemeProvider theme={theme}>
 //     {props.children}
 //   </ThemeProvider>
+// );
+/* ⇣ ⇣ ⇣ ⇣ ⇣ */
+// const StyledAppWithTheme = () => (
+//   <AppLayout>
+//     <App />
+//   </AppLayout>
 // );

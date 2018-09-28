@@ -58,9 +58,3 @@ class Button extends Component {
 
 const StyledButton = injectSheet(styles, Button);
 export default StyledButton;
-
-// const StyledButtonWithTheme = () => (
-//   <AppLayout>
-//     <StyledButton />
-//   </AppLayout>
-// );

@@ -47,3 +47,6 @@ const WrappedComponent = () => (
 [Theming : react-jss](http://cssinjs.org/react-jss#theming)
 
 [default theme](https://material-ui.com/customization/default-theme/)
+
+
+*** ** *old docs, not yet updated*
