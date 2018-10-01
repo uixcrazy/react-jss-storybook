@@ -3,24 +3,31 @@
  */
 import React from 'react';
 import injectSheet, { ThemeProvider } from 'react-jss';
+import merge from 'lodash.merge';
 import { DefaultTheme } from './default-theme';
 
 const injectSheetWithTheme = (styles, App) => {
-  const theme = {
-    ...DefaultTheme,
-    palette: { // it's wrong!!!
-      primary: {
-        light: '#fff352',
-        main: '#fef035',
-        dark: '#e5d900',
+  const theme = merge(
+    DefaultTheme,
+    {
+      palette: {
+        primary: {
+          light: '#fef35d',
+          main: '#fef035', // FEF035
+          dark: '#e5d900', // E5D900
+          contrastText: '#35495a',
+        },
+        secondary: {
+          light: '#5d6d7b',
+          main: '#35495A', // #364959
+          dark: '#373A3C',
+          contrastText: '#fff',
+        },
       },
-      secondary: {
-        light: '#014c8c',
-        main: '#014c8c',
-        dark: '#014c8c',
-      },
-    },
-  };
+      // gray: #686868, #D8D8D8
+    }
+  );
+  console.log(theme);
   const StyledApp = injectSheet(styles)(App);
   const Layout = props => (
     <ThemeProvider theme={theme}>

@@ -1,5 +1,6 @@
 /**
  * https://material-ui.com/customization/default-theme/
+ * generate color theme: https://material-ui.com/style/color/#color-tool
  */
 
 /* eslint-disable */

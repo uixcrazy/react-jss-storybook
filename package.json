@@ -43,6 +43,7 @@
     "jest": "22.4.3",
     "jss": "^9.8.7",
     "loader-utils": "^1.1.0",
+    "lodash.merge": "^4.6.1",
     "mini-css-extract-plugin": "^0.4.0",
     "object-assign": "4.1.1",
     "optimize-css-assets-webpack-plugin": "^4.0.1",
