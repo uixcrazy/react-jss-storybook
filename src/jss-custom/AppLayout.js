@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import jss from 'jss';
 import { JssProvider, ThemeProvider } from 'react-jss';
 import { DefaultTheme } from '../utils/default-theme';
@@ -19,25 +19,44 @@ const theme = {
   },
 };
 
-jss
-  .createStyleSheet(
-    {
-      // "button" is a rule name, class is generated.
-      button: {
-        width: 100,
-        height: 100,
-      },
-    },
-    { media: 'print' }
-  )
-  .attach();
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.jss = null;
+    this.sheet = null;
+  }
 
-const App = props => (
-  <JssProvider jss={jss}>
-    <ThemeProvider theme={theme}>
-      {props.children}
-    </ThemeProvider>
-  </JssProvider>
-);
+  componentWillUnmount() {
+    if (this.sheet) {
+      this.sheet.detach();
+    }
+  }
 
-export default App;
+  componentDidMount() {
+    /**
+    * http://cssinjs.org/js-api#create-style-sheet
+    */
+    this.sheet = jss
+      .createStyleSheet(
+        {
+          // "button" is a rule name, class is generated.
+          button: {
+            width: 100,
+            height: 100,
+          },
+        },
+        { media: 'print' }
+      )
+      .attach();
+  }
+
+  render() {
+    return (
+      <JssProvider jss={jss}>
+        <ThemeProvider theme={theme}>
+          {this.props.children}
+        </ThemeProvider>
+      </JssProvider>
+    );
+  }
+}
