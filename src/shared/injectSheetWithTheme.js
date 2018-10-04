@@ -27,7 +27,6 @@ const injectSheetWithTheme = (styles, App) => {
       // gray: #686868, #D8D8D8
     }
   );
-  console.log(theme);
   const StyledApp = injectSheet(styles)(App);
   const Layout = props => (
     <ThemeProvider theme={theme}>

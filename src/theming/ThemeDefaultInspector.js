@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Inspector, { chromeDark } from 'react-inspector';
-import { DefaultTheme } from '../utils/default-theme';
+import { DefaultTheme } from '../shared/default-theme';
 
 class ThemeDefaultInspector extends Component {
   state = {

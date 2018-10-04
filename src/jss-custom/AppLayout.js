@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import jss from 'jss';
 import { JssProvider, ThemeProvider } from 'react-jss';
-import { DefaultTheme } from '../utils/default-theme';
+import { DefaultTheme } from '../shared/default-theme';
 
 const theme = {
   ...DefaultTheme,
