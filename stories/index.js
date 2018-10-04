@@ -19,13 +19,17 @@ import SSRendering from '../src/server-side-rendering';
 import SSRenderingReadme from '../src/server-side-rendering/README.md';
 import SSRenderingContent from '!!raw-loader!../src/server-side-rendering';
 
-import Decorators from '../src/decorators';
-import DecoratorsReadme from '../src/decorators/README.md';
-import DecoratorsContent from '!!raw-loader!../src/decorators';
-
 import JssCustom from '../src/jss-custom';
 import JssCustomReadme from '../src/jss-custom/README.md';
 import JssCustomContent from '!!raw-loader!../src/jss-custom';
+
+import AttachRawCss from '../src/attach-raw-css';
+import AttachRawCssReadme from '../src/attach-raw-css/README.md';
+import AttachRawCssContent from '!!raw-loader!../src/shared/attachRawCss';
+
+import Decorators from '../src/decorators';
+import DecoratorsReadme from '../src/decorators/README.md';
+import DecoratorsContent from '!!raw-loader!../src/decorators';
 
 storiesOf('React JSS', module)
 .add('1. Getting Started', () =>(
@@ -63,7 +67,14 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
-.add('5... Decorators', () =>(
+.add('6. Attach Raw CSS', () =>(
+  <WithNotes notes={AttachRawCssReadme}>
+    <WithStorySource storysource={AttachRawCssContent}>
+      <AttachRawCss />
+    </WithStorySource>
+  </WithNotes>
+))
+.add('7. Decorators', () =>(
   <WithNotes notes={DecoratorsReadme}>
     <WithStorySource storysource={DecoratorsContent}>
       <Decorators />
