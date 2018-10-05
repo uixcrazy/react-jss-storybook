@@ -1,29 +1,36 @@
 import React, { Component } from 'react';
 import jss from 'jss';
 import { JssProvider, ThemeProvider } from 'react-jss';
-import { DefaultTheme } from '../shared/default-theme';
+import merge from 'lodash.merge';
+import { DefaultTheme } from '../utils/default-theme';
+import createGenerateClassName from '../utils/createGenerateClassName';
 
-const theme = {
-  ...DefaultTheme,
-  palette: { // it's wrong!!!
-    primary: {
-      light: '#fff352',
-      main: '#fef035',
-      dark: '#e5d900',
+const theme = merge(
+  DefaultTheme,
+  {
+    palette: {
+      primary: {
+        light: '#fef35d',
+        main: '#fef035',
+        dark: '#e5d900',
+        contrastText: '#35495a',
+      },
+      secondary: {
+        light: '#5d6d7b',
+        main: '#35495A',
+        dark: '#373A3C',
+        contrastText: '#fff',
+      },
     },
-    secondary: {
-      light: '#014c8c',
-      main: '#014c8c',
-      dark: '#014c8c',
-    },
-  },
-};
+  }
+);
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.jss = null;
     this.sheet = null;
+    this.generateClassName = createGenerateClassName();
   }
 
   componentWillUnmount() {
@@ -52,7 +59,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <JssProvider jss={jss}>
+      <JssProvider generateClassName={this.generateClassName}>
         <ThemeProvider theme={theme}>
           {this.props.children}
         </ThemeProvider>
