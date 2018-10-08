@@ -7,7 +7,7 @@ const styles = {
     width: '10rem',
     height: '10rem',
     background: {
-      image: `url(${require('../../assets/images/blackboard.svg')})`,
+      image: `url(${require('./blackboard.svg')})`,
       repeat: 'no-repeat',
       position: [0, 0],
       size: 'contain',

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import injectSheet from '../utils/injectSheetWithTheme';
+import injectSheet from '../_utils/injectSheetWithTheme';
 import ThemeDefaultInspector from './ThemeDefaultInspector';
 
 const styles = theme => ({

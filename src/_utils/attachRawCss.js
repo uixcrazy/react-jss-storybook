@@ -1,11 +1,12 @@
 /**
  * http://cssinjs.org/js-api?v=v9.8.7
  * http://cssinjs.org/js-api?v=v9.8.7#setup-jss-instance
+ * http://cssinjs.org/js-api/?v=v6.2.0#style-sheets-registry
  */
 import React, { Component } from 'react';
 import { SheetsRegistry, create } from 'jss';
 
-function attachStyleSheet(rawStyles, dataMeta = 'Here will be data-meta content!') {
+const attachStyleSheet = (rawStyles, dataMeta = 'Here will be data-meta content!') => {
   const sheets = new SheetsRegistry();
   const _jss = create(); // eslint-disable-line no-underscore-dangle
   _jss.use({
@@ -30,7 +31,7 @@ function attachStyleSheet(rawStyles, dataMeta = 'Here will be data-meta content!
     meta: dataMeta,
   }).attach();
   return sheet;
-}
+};
 
 const detachStyleSheet = sheet => sheet && sheet.detach();
 
@@ -52,7 +53,7 @@ const attachRawCss = (rawStyles, dataMeta, App) => {
     }
 
     render() {
-      return (<App {...this.props}/>);
+      return <App {...this.props}/>;
     }
   }
   return AttachedApp;

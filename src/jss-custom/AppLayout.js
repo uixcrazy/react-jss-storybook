@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import jss from 'jss';
 import { JssProvider, ThemeProvider } from 'react-jss';
 import merge from 'lodash.merge';
-import { DefaultTheme } from '../utils/default-theme';
-import createGenerateClassName from '../utils/createGenerateClassName';
+import { DefaultTheme } from '../_utils/default-theme';
+import createGenerateClassName from '../_utils/createGenerateClassName';
 
 const theme = merge(
   DefaultTheme,

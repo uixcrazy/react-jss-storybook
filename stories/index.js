@@ -25,7 +25,7 @@ import JssCustomContent from '!!raw-loader!../src/jss-custom';
 
 import AttachRawCss from '../src/attach-raw-css';
 import AttachRawCssReadme from '../src/attach-raw-css/README.md';
-import AttachRawCssContent from '!!raw-loader!../src/utils/attachRawCss';
+import AttachRawCssContent from '!!raw-loader!../src/_utils/attachRawCss';
 
 import Decorators from '../src/decorators';
 import DecoratorsReadme from '../src/decorators/README.md';
