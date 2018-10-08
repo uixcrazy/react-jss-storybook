@@ -36,7 +36,7 @@ class GettingStarted extends Component {
   }
 
   handleClick = () => {
-    alert(this.state.message);
+    console.log(this.state.message);
   }
 
   render() {
