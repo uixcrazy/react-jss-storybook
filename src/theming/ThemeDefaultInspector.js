@@ -1,6 +1,24 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import injectSheet from 'react-jss';
 import Inspector, { chromeDark } from 'react-inspector';
 import { DefaultTheme } from '../_utils/default-theme';
+
+const styles = {
+  defaultTheme: {
+    marginTop: 8,
+    '& > label': {
+      marginBottom: 8,
+      display: 'flex',
+      alignItems: 'center',
+    },
+    '& [type="checkbox"]': {
+      marginRight: 4,
+    },
+    '& li': { // for Inspector Tree
+      padding: '5px 0',
+    },
+  },
+};
 
 class ThemeDefaultInspector extends Component {
   state = {
@@ -10,7 +28,7 @@ class ThemeDefaultInspector extends Component {
   render() {
     const { checked } = this.state;
     return (
-      <Fragment>
+      <div className={this.props.classes.defaultTheme}>
         <label>
           <input type="checkbox"
             onChange={(event, value) => this.setState({ checked: !checked })} // eslint-disable-line
@@ -32,8 +50,8 @@ class ThemeDefaultInspector extends Component {
             key={`${checked}-${DefaultTheme.palette.type}`}
           />
         </div>
-      </Fragment>
+      </div>
     );
   }
 }
-export default ThemeDefaultInspector;
+export default injectSheet(styles)(ThemeDefaultInspector);

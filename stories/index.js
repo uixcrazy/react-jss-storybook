@@ -7,12 +7,12 @@ import GettingStarted from '../src/getting-started';
 import GettingStartedReadme from '../src/getting-started/README.md';
 import GettingStartedContent from '!!raw-loader!../src/getting-started';
 
-import ExpandedProperties from '../src/expanded-properties';
-import ExpandedPropertiesReadme from '../src/expanded-properties/README.md';
-import ExpandedPropertiesContent from '!!raw-loader!../src/expanded-properties';
+import BgrSVG from '../src/using-svg';
+import BgrSVGReadme from '../src/using-svg/README.md';
+import BgrSVGContent from '!!raw-loader!../src/using-svg';
 
 import Theming from '../src/theming';
-import ThemingReadme from '../src/theming/README.md';
+import ThemingReadme from '../src/theming/readme/README.md';
 import ThemingContent from '!!raw-loader!../src/theming';
 
 import SSRendering from '../src/server-side-rendering';
@@ -31,6 +31,10 @@ import Decorators from '../src/decorators';
 import DecoratorsReadme from '../src/decorators/README.md';
 import DecoratorsContent from '!!raw-loader!../src/decorators';
 
+import ElementStates from '../src/element-states';
+import ElementStatesReadme from '../src/element-states/README.md';
+import ElementStatesContent from '!!raw-loader!../src/element-states';
+
 storiesOf('React JSS', module)
 .add('1. Getting Started', () =>(
   <WithNotes notes={GettingStartedReadme}>
@@ -39,10 +43,10 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
-.add('2. Expanded Properties', () =>(
-  <WithNotes notes={ExpandedPropertiesReadme}>
-    <WithStorySource storysource={ExpandedPropertiesContent}>
-      <ExpandedProperties />
+.add('2. Using SVG as background-image', () =>(
+  <WithNotes notes={BgrSVGReadme}>
+    <WithStorySource storysource={BgrSVGContent}>
+      <BgrSVG />
     </WithStorySource>
   </WithNotes>
 ))
@@ -53,14 +57,14 @@ storiesOf('React JSS', module)
     </WithStorySource>
   </WithNotes>
 ))
-.add('4. Server-side rendering', () =>(
+.add('4. Server-side rendering -- working', () =>(
   <WithNotes notes={SSRenderingReadme}>
     <WithStorySource storysource={SSRenderingContent}>
       <SSRendering />
     </WithStorySource>
   </WithNotes>
 ))
-.add('5. Custom setup', () =>(
+.add('5. Custom setup -- working', () =>(
   <WithNotes notes={JssCustomReadme}>
     <WithStorySource storysource={JssCustomContent}>
       <JssCustom />
@@ -78,6 +82,13 @@ storiesOf('React JSS', module)
   <WithNotes notes={DecoratorsReadme}>
     <WithStorySource storysource={DecoratorsContent}>
       <Decorators />
+    </WithStorySource>
+  </WithNotes>
+))
+.add('8. Element States: active, disabled', () =>(
+  <WithNotes notes={ElementStatesReadme}>
+    <WithStorySource storysource={ElementStatesContent}>
+      <ElementStates />
     </WithStorySource>
   </WithNotes>
 ))

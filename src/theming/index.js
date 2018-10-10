@@ -1,60 +1,37 @@
-import React, { Component, Fragment } from 'react';
-import injectSheet from '../_utils/injectSheetWithTheme';
+import React, { Fragment } from 'react';
+import merge from 'lodash.merge';
+import { ThemeProvider } from 'react-jss';
+import { DefaultTheme } from '../_utils/default-theme';
+import Button from './Button';
 import ThemeDefaultInspector from './ThemeDefaultInspector';
 
-const styles = theme => ({
-  btn: {
-    display: 'inline-flex',
-    border: '1px solid #eee',
-    fontSize: 18,
-    letterSpacing: 0.6,
-    borderRadius: 5,
-    cursor: 'pointer',
-    padding: theme.spacing.unit,
-    color: theme.palette.secondary.main,
-    backgroundColor: theme.palette.primary.main,
-    borderColor: theme.palette.primary.dark,
-  },
-  defaultTheme: {
-    marginTop: theme.spacing.unit,
-    '& > label': {
-      marginBottom: theme.spacing.unit,
-      display: 'flex',
-      alignItems: 'center',
+const theme = merge(
+  DefaultTheme,
+  {
+    palette: {
+      primary: {
+        light: '#fef35d',
+        main: '#fef035',
+        dark: '#e5d900',
+        contrastText: '#35495a',
+      },
+      secondary: {
+        light: '#5d6d7b',
+        main: '#35495A',
+        dark: '#373A3C',
+        contrastText: '#fff',
+      },
     },
-    '& [type="checkbox"]': {
-      marginRight: theme.spacing.unit / 2,
-    },
-    '& li': { // for Inspector Tree
-      padding: '5px 0',
-    },
-  },
-});
-
-class Button extends Component {
-  state = {
-    message: 'Hello!',
-  };
-
-  handleClick = () => {
-    alert(this.state.message);
   }
+);
 
-  render() {
-    return (
-      <Fragment>
-        <button
-          className={this.props.classes.btn}
-          onClick={this.handleClick}>
-          Say hello
-        </button>
-        <div className={this.props.classes.defaultTheme}>
-          <ThemeDefaultInspector />
-        </div>
-      </Fragment>
-    );
-  }
-}
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <Fragment>
+      <Button />
+      <ThemeDefaultInspector />
+    </Fragment>
+  </ThemeProvider>
+);
 
-const StyledButton = injectSheet(styles, Button);
-export default StyledButton;
+export default App;

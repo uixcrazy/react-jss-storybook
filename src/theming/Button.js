@@ -1,10 +1,9 @@
 import React from 'react';
 import injectSheet from 'react-jss';
-import AppLayout from './AppLayout';
 
 const styles = theme => ({
-  buttonOutlined: {
-    fontSize: 18,
+  btn: {
+    fontSize: 16,
     borderRadius: 5,
     cursor: 'pointer',
     border: '1px solid #eee',
@@ -12,20 +11,21 @@ const styles = theme => ({
     color: theme.palette.secondary.main,
     backgroundColor: theme.palette.primary.main,
     borderColor: theme.palette.primary.dark,
+    '&:focus': {
+      outline: 'none',
+    },
   },
 });
 
-const Button = props => (
-  <button className={props.classes.buttonOutlined}>
+const Button = ({ classes }) => (
+  <button
+    className={classes.btn}
+    onClick={() => {
+      console.log('You clicked yellow button!');
+    }}
+  >
     Say hello
   </button>
 );
 
-const StyledButton = injectSheet(styles)(Button);
-const StyledButtonWithTheme = () => (
-  <AppLayout>
-    <StyledButton />
-  </AppLayout>
-);
-
-export default StyledButtonWithTheme;
+export default injectSheet(styles)(Button);

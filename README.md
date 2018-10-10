@@ -25,11 +25,17 @@ Then open ```http://localhost:6006/``` to see your app.
 
 ## Table of Contents
 
-  - [x] Getting Started
+  - [x] Getting Started (Basic)
+  - [x] Using SVG as background-image
   - [x] Theming
+  - [x] Add CSS files (Attach Raw CSS)
   - [x] Decorators
-  - [ ] Custom setup
+  - [x] Element States: active, disabled
+
+  - [ ] Custom setup ??
   - [ ] Server-side rendering (we have issue with Nextjs)
+  - [ ] animation
+  - [ ] grid
 
   Others:
 

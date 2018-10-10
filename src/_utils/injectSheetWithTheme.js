@@ -1,5 +1,6 @@
 /**
  * this is different ```withTheme``` by react-jss
+ * only need apply at Layout once time
  */
 import React from 'react';
 import injectSheet, { ThemeProvider } from 'react-jss';
@@ -13,13 +14,13 @@ const injectSheetWithTheme = (styles, App) => {
       palette: {
         primary: {
           light: '#fef35d',
-          main: '#fef035', // FEF035
-          dark: '#e5d900', // E5D900
+          main: '#fef035',
+          dark: '#e5d900',
           contrastText: '#35495a',
         },
         secondary: {
           light: '#5d6d7b',
-          main: '#35495A', // #364959
+          main: '#35495A',
           dark: '#373A3C',
           contrastText: '#fff',
         },

@@ -1,11 +1,8 @@
-# Expanded Properties
-
+# Using SVG as background-image
 
 ## Overview
 
   - [x] using SVG as background-image
-  - [ ] animation
-  - [ ] grid
 
 ## See more information
 

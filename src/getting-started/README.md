@@ -13,24 +13,14 @@ or
 1. At first, we have a React Component like this:
 
   ```
-  import React, { Component } from 'react';
+  import React from 'react';
+  import PropTypes from 'prop-types';
 
-  class GettingStarted extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {message: 'Hello!'};
-    }
-    handleClick = () => {
-      alert(this.state.message);
-    }
-    render() {
-      return (
-        <button onClick={this.handleClick}>
-          Say hello
-        </button>
-      );
-    }
-  }
+  const GettingStarted = props => (
+    <button className={props.classes.buttonOutlined}>
+      Say hello
+    </button>
+  );
 
   export default GettingStarted;
   ```
@@ -43,7 +33,7 @@ or
 
   ```
   const styles = {
-    myButton: {
+    buttonOutlined: {
       ...
 
   }
@@ -67,7 +57,7 @@ or
 
 4. We have to assign class name (defined in styles objects) to className:
 
-  ``` ... className={this.props.classes.myButton} ...```
+  ``` ... className={this.props.classes.buttonOutlined} ...```
 
 5. See Detail Sample [at next tab](/?selectedKind=React%20JSS&selectedStory=1.%20Getting%20Started&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Fstorysource%2Fpanel)
 
