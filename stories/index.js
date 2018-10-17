@@ -35,6 +35,10 @@ import ElementStates from '../src/element-states';
 import ElementStatesReadme from '../src/element-states/README.md';
 import ElementStatesContent from '!!raw-loader!../src/element-states';
 
+import Animation from '../src/animation';
+import AnimationReadme from '../src/animation/README.md';
+import AnimationContent from '!!raw-loader!../src/animation';
+
 storiesOf('React JSS', module)
 .add('1. Getting Started', () =>(
   <WithNotes notes={GettingStartedReadme}>
@@ -89,6 +93,13 @@ storiesOf('React JSS', module)
   <WithNotes notes={ElementStatesReadme}>
     <WithStorySource storysource={ElementStatesContent}>
       <ElementStates />
+    </WithStorySource>
+  </WithNotes>
+))
+.add('9. Animation', () =>(
+  <WithNotes notes={AnimationReadme}>
+    <WithStorySource storysource={AnimationContent}>
+      <Animation />
     </WithStorySource>
   </WithNotes>
 ))
